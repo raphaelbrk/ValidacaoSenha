@@ -7,7 +7,7 @@ using Validacao.Senha.Domain.Extensions;
 namespace Validacao.Senha.IntegrationTests.Controllers
 {
     /// <summary>
-    /// Classe responsável em executar os testes integração da geração do token.
+    /// Classe responsável em executar os testes da integração da geração do token.
     /// </summary>
     /// <seealso cref="Validacao.Senha.IntegrationTests.BaseTest" />
     internal class TokenControllerTest : BaseTest

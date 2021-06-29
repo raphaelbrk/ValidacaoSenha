@@ -12,7 +12,7 @@ using Validacao.Senha.Web.ViewModel;
 namespace Validacao.Senha.IntegrationTests.Controllers
 {
     /// <summary>
-    /// Classe responsável em GravarSenha a integração do controller de validação.
+    /// Classe responsável em GravarSenha da integração do controller de validação.
     /// </summary>
     /// <seealso cref="Validacao.Senha.IntegrationTests.BaseTest" />
     internal class GravarSenhaController : BaseTest
