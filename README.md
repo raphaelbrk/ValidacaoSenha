@@ -12,10 +12,9 @@ Esse projeto foi desenvolvimento na tecnologia .NET 5 para a validação de senh
 
 As regras estão desacopladas e são validadas separadamente. 
 
-
 Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias utilizadas:
 
-<b>Tecnologias Utilizadas:</b>
+<b>#Tecnologias Utilizadas:</b>
 
  - .NET 5.
  - MongoDB.
@@ -28,7 +27,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - FluentValidation.
  - Regex.
 
- <b>Padrões de Projetos Utilizados:</b>
+ <b>#Padrões de Projetos Utilizados:</b>
  - Generic Repository Pattern.
  - Unit of Work Paterrn.
  - Notification Pattern.
@@ -39,15 +38,15 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - Command Pattern.
  - Dependency Injection Pattern.
 
-  <b>Metodologias Utilizadas</b>
+  <b>#Metodologias Utilizadas</b>
   - Clean Code.
   - SOLID.
   - TDD.
   - Documentação de Classes.
   - Principio do DDD (Insolamento do Dominio da Aplicação);
 
-<b>Arquitetura Utilizada: Clean Architecture</b>
-Motivos: 
+<b>#Arquitetura Utilizada: Clean Architecture</b>
+ * Motivos: 
 - Independência de Framework.
 - Independência de identidade.
 - Independência de banco de dados.
