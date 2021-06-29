@@ -65,6 +65,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 Estrutura do Projeto:
 
+```
 📦src
  ┣ 📂Validacao.Senha.Application 
  ┃ ┣ 📂Authorization
@@ -179,3 +180,4 @@ Estrutura do Projeto:
  ┃ ┣ 📜Validacao.Senha.Web.csproj.user
  ┃ ┗ 📜Validacao.Senha.Web.xml
  ┗ 📜ValidacaoSenha.sln
+ ```
