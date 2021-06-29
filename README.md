@@ -71,9 +71,17 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 ```
 📦src
- ┣ 📂Validacao.Senha.Application 
+ ┣ 📂.vs
+ ┃ ┗ 📂ValidacaoSenha
+ ┃ ┃ ┗ 📂v16
+ ┃ ┃ ┃ ┣ 📂TestStore
+ ┃ ┃ ┃ ┃ ┗ 📂0
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜001.testlog
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜testlog.manifest
+ ┃ ┃ ┃ ┗ 📜.suo
+ ┣ 📂Validacao.Senha.Application
  ┃ ┣ 📂Authorization
- ┃ ┃ ┗ 📜GerarTokenAuthorization.cs
+ ┃ ┃ ┗ 📜TokenAuthorization.cs
  ┃ ┣ 📂Base
  ┃ ┃ ┗ 📜BaseSenhaQueryCommand.cs
  ┃ ┣ 📂Command
@@ -85,8 +93,8 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┃ ┃ ┣ 📜GravarSenhaHandler.cs
  ┃ ┃ ┗ 📜ValidarSenhaHandler.cs
  ┃ ┣ 📂Interfaces
- ┃ ┃ ┣ 📜IGerarTokenAuthorization.cs
- ┃ ┃ ┗ 📜INotificacaoContext.cs
+ ┃ ┃ ┣ 📜INotificacaoContext.cs
+ ┃ ┃ ┗ 📜ITokenAuthorization.cs
  ┃ ┣ 📂Query
  ┃ ┃ ┣ 📜GerarTokenSenhaQuery.cs
  ┃ ┃ ┗ 📜ValidarSenhaQuery.cs
@@ -144,6 +152,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┃ ┗ 📜Validacao.Senha.Infrastructure.csproj
  ┣ 📂Validacao.Senha.IntegrationTests
  ┃ ┣ 📂Controllers
+ ┃ ┃ ┣ 📜GravarSenhaControllerTest.cs
  ┃ ┃ ┣ 📜TokenControllerTest.cs
  ┃ ┃ ┗ 📜ValidarControllerTest.cs
  ┃ ┣ 📜BaseTest.cs
@@ -183,7 +192,8 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┃ ┣ 📜Validacao.Senha.Web.csproj
  ┃ ┣ 📜Validacao.Senha.Web.csproj.user
  ┃ ┗ 📜Validacao.Senha.Web.xml
- ┗ 📜ValidacaoSenha.sln
+ ┣ 📜ValidacaoSenha.sln
+ ┗ 📜ValidacaoSenha.sln.DotSettings.user
  ```
 
 ## Execução da Aplicação - Validação de Senha ##
@@ -240,8 +250,3 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
       "Conteudo":"informar_senha"
     } 
   ```
- 
-   
-    
-    
-    
