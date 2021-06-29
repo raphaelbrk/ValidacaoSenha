@@ -62,8 +62,11 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Implementação do repositório MongoDB. Mesmo que o escopo inicial não pedisse, tive a proatividade de mostrar mais da minha implementação.
 - Implementação de alguns padrões de projetos normalmente utilizados e outros para demostrar o meu nivel de conhecimento.
 - Utilização do Clean Code.
+- Utilização da aplicação autenticação JWT básica para ter uma segurança maior na API.
 
 Estrutura do Projeto:
+
+> **_Nota:_** Vale lembrar que cada classe possui o comentario de sua responsabilidade. O intuito é para facilitar o entendimento.
 
 ```
 📦src
@@ -181,3 +184,4 @@ Estrutura do Projeto:
  ┃ ┗ 📜Validacao.Senha.Web.xml
  ┗ 📜ValidacaoSenha.sln
  ```
+
