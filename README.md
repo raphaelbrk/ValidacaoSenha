@@ -1,4 +1,4 @@
-# ValidacaoSenha
+# Projeto de Validação de Senha
 
 Esse projeto foi desenvolvimento na tecnologia .NET 5 para a validação de senha. Este projeto segue as seguintes regras para validação:
 
@@ -46,7 +46,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
   - Principio do DDD (Insolamento do Dominio da Aplicação);
 
 <b>#Arquitetura Utilizada: Clean Architecture</b>
- * Motivos: 
+<b>Motivos:</b>
 - Independência de Framework.
 - Independência de identidade.
 - Independência de banco de dados.
