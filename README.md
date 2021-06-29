@@ -66,7 +66,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 Estrutura do Projeto:
 
-> **_Nota:_** Vale lembrar que cada classe possui o comentario de sua responsabilidade. O intuito é para facilitar o entendimento.
+> **_Nota:_** Para cada classe existe uma documentação em cabeçalho explicando a sua responsabilidade. O intuito é para facilitar o entendimento das responsabilidades.
 
 ```
 📦src
