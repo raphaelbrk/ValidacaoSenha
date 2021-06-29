@@ -35,7 +35,6 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - Middleware Pattern.
  - Singleton Pattern.
  - Inversion of Control Pattern.
- - Interceptor Pattern.
  - Command Pattern.
  - Dependency Injection Pattern.
 
