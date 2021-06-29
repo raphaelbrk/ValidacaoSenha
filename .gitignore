@@ -8,3 +8,9 @@
 /src/Validacao.Senha.UnitTests/obj
 /src/Validacao.Senha.Web/obj
 /src/.vs/ValidacaoSenha/v16
+/src/Validacao.Senha.Web/bin/Debug/net5.0
+/src/Validacao.Senha.UnitTests/bin/Debug/net5.0
+/src/Validacao.Senha.IntegrationTests/bin/Debug/net5.0
+/src/Validacao.Senha.Infrastructure/bin/Debug/net5.0
+/src/Validacao.Senha.Domain/bin/Debug/net5.0
+/src/Validacao.Senha.Application/bin/Debug/net5.0
