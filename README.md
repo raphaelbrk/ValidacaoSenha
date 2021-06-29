@@ -190,7 +190,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 ## Execução da Aplicação - Validação de Senha ##
 
   <b>1)</b> Primeiramente, execute o docker-compose up -d para iniciar a instancia do MongoDB. 
-  </br>
+  <br>
    > **_Nota:_** Essa etapa, é executada apenas caso queira testar a parte de gravação e executar os testes unitários.
    
    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/dockercomposeup.jpg?raw=true)
@@ -216,12 +216,13 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ## Execução da Aplicação - Gravação de Senha ##
 
   <b>1)</b> Primeiramente, execute o docker-compose up -d para iniciar a instancia do MongoDB. 
-  </br>
+  <br>
    > **_Nota:_** Essa etapa, é executada apenas caso queira testar a parte de gravação e executar os testes unitários.
    
    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/dockercomposeup.jpg?raw=true)
     <br>
     <b>2)</b> Executar a aplicação Validacao.Senha.Web, por comando, dotnet run ou pelo visual studio ou code.
+    <br>
     <b>3)</b> Após executar com sucesso, acessar a página do swagger, pela seguite url: http://localhost:9001/swagger
     <br>
     ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/pagina-swagger.jpg?raw=true)
