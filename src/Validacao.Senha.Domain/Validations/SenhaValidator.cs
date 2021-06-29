@@ -39,7 +39,7 @@ namespace Validacao.Senha.Domain.Validations
         private void ValidarSenhaCaracterRepetido()
         {
             RuleFor(a => a.ConteudoCriptografado)
-                .Must(x => !x.Validar(RegexConstantes.REGEX_CARACTER_REPETIDO))
+                .Must(x => !x.Validar(RegexConstantes.REGEX_CARACTER_REPETIDO, true))
                 .WithMessage(MensagensConstantes.SENHA_COM_CARACTER_REPETIDO)
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error06.ObterDescricao());
         }

@@ -97,6 +97,17 @@ namespace Validacao.Senha.IntegrationTests.Controllers
             Assert.IsTrue(retorno.Notificacoes.Where(x => x.Retorno.Equals(RetornoEnum.Inconsistencia))?.Any());
         }
 
+        [Test]
+        public async Task Validar_Senha_BadRquest_Menos_Nove_Caracter()
+        {
+            var response = await Post(new GravarSenhaCommand("AbTp9!fo"), "/GravarSenha", ObterHttpClient());
+
+            TestarStatusCode(response, HttpStatusCode.BadRequest);
+            var retorno = await RetornarResponse(response);
+
+            Assert.IsTrue(retorno.Notificacoes.Where(x => x.Retorno.Equals(RetornoEnum.Inconsistencia))?.Any());
+        }
+
         #endregion "Testes"
     }
 }

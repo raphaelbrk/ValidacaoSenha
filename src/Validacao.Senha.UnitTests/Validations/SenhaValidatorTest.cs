@@ -114,7 +114,7 @@ namespace Validacao.Senha.UnitTests.Validations
         [Test]
         public void Validar_Senha_Valor_Caracter_Repetido_Falha()
         {
-            var senha = CriarSenha("aabb32");
+            var senha = CriarSenha("aAb123");
 
             _ = senha.Validar();
 
