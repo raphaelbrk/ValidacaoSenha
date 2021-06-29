@@ -14,7 +14,7 @@ As regras estão desacopladas e são validadas separadamente através do FluentV
 
 Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias utilizadas:
 
-<b>Tecnologias Utilizadas:</b>
+## Tecnologias Utilizadas: ##
 
  - .NET 5.
  - MongoDB.
@@ -27,7 +27,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - FluentValidation.
  - Regex.
 
- <b>Padrões de Projetos Utilizados:</b>
+ ## Padrões de Projetos Utilizados: ##
  - Generic Repository Pattern.
  - Unit of Work Paterrn.
  - Notification Pattern.
@@ -38,14 +38,14 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - Command Pattern.
  - Dependency Injection Pattern.
 
-  <b>Metodologias Utilizadas</b>
+  ## Metodologias Utilizadas ##
   - Clean Code.
   - SOLID.
   - TDD.
   - Documentação de Classes.
   - Principio do DDD (Insolamento do Dominio da Aplicação);
 
-<b>Arquitetura Utilizada: Clean Architecture:</b>
+## Arquitetura Utilizada: Clean Architecture: ##
 </br>
 <b>Motivos:</b>
 - Independência de Framework.
@@ -54,7 +54,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Independência de qualquer elemento externo.
 - Ter uma maior estabilidade.
 
-<b>Outros Motivos de Decisão de Implementação:</b>
+## Outros Motivos de Decisão de Implementação: ##
  - Alteração no retorno da API para ao invés de retornar apenas um verdadeiro/falso, a aplicação retornará as inconsistências da validações de senha e se a validação foi verdadeiro ou não.
  - Implementação de uma criptografia básica para ter uma maior segurança na transferência das senhas entre as camandas e a persistência de banco. 
  - Decisão de utilizar o Mediatr para abstrair o projeto da API com o projeto da Application, tendo a abstração através da interface do MediatR.
@@ -64,9 +64,11 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Utilização do Clean Code.
 - Utilização da aplicação autenticação JWT básica para ter uma segurança maior na API.
 
-Estrutura do Projeto:
 
 > **_Nota:_** Para cada classe existe uma documentação em cabeçalho explicando a sua responsabilidade. O intuito é para facilitar o entendimento das responsabilidades.
+
+## Estrutura do Projeto: ##
+
 
 ```
 📦src
