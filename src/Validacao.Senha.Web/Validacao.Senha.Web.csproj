@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>G:\Desenvolvimento\Provas\ValidacaoSenha\Validacao.Senha.Web\Validacao.Senha.Web.xml</DocumentationFile>
+    <DocumentationFile>G:\Desenvolvimento\Provas\ValidacaoSenha\src\Validacao.Senha.Web\Validacao.Senha.Web.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

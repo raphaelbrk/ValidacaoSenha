@@ -1,18 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc.Testing;
+﻿using System.Net;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
+using NUnit.Framework;
 using Validacao.Senha.Domain.Extensions;
 using Validacao.Senha.Web;
+using Validacao.Senha.Web.ViewModel;
 
 namespace Validacao.Senha.IntegrationTests
 {
     /// <summary>
     /// Classe base responsável em guardar os metódos compartilhados dos testes integrados.
     /// </summary>
-    /// <seealso cref="Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactory{Validacao.Senha.Web.Startup}" />
+    /// <seealso cref="Startup" />
     public abstract class BaseTest : WebApplicationFactory<Startup>
     {
         private static HttpClient _httpClient;
@@ -44,6 +47,18 @@ namespace Validacao.Senha.IntegrationTests
                 new StringContent(JsonConvert.SerializeObject(objeto), null, "application/json");
 
             return await httpClient.PostAsync(endpoint, httpContent);
+        }
+
+        protected static async Task<RetornoViewModel> RetornarResponse(HttpResponseMessage response)
+        {
+            var retornoApi = await response.Content.ReadAsStringAsync();
+            var retorno = JsonConvert.DeserializeObject<RetornoViewModel>(retornoApi);
+            return retorno;
+        }
+
+        protected static void TestarStatusCode(HttpResponseMessage response, HttpStatusCode statusCode)
+        {
+            Assert.IsTrue(response.StatusCode.Equals(statusCode));
         }
     }
 }
