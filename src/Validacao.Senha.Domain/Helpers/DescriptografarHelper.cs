@@ -18,7 +18,7 @@ namespace Validacao.Senha.Domain.Helpers
         {
             if (string.IsNullOrWhiteSpace(senha)) return string.Empty;
 
-            if (senha.EhNuloOuExisteEspaco()) throw new EncriptacaoPossuiEspacoException(AcaoEncryptionEnum.Decrypt);
+            if (senha.EhNuloOuExisteEspaco()) throw new EncriptacaoPossuiEspacoException(AcaoEncryptionEnum.Descriptografar);
 
             senha = senha.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(senha);

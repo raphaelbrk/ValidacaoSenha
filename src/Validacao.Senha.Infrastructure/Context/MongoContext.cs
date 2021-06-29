@@ -53,7 +53,6 @@ namespace Validacao.Senha.Infrastructure.Context
 
             using (Sessao = await MongoClient.StartSessionAsync())
             {
-
                 var commandTasks = _comandos.Select(c => c());
 
                 await Task.WhenAll(commandTasks);

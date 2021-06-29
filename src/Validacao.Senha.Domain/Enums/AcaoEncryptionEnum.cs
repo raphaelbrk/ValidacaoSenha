@@ -8,9 +8,9 @@ namespace Validacao.Senha.Domain.Enums
     public enum AcaoEncryptionEnum
     {
         [Description("Criptografar")]
-        Encrypt = 1,
+        Criptografar = 1,
 
         [Description("Descriptografar")]
-        Decrypt
+        Descriptografar
     }
 }

@@ -1,11 +1,10 @@
-﻿using System.Net;
-using Microsoft.AspNetCore.Mvc.Testing;
+﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
+using NUnit.Framework;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text.Json;
 using System.Threading.Tasks;
-using NUnit.Framework;
 using Validacao.Senha.Domain.Extensions;
 using Validacao.Senha.Web;
 using Validacao.Senha.Web.ViewModel;

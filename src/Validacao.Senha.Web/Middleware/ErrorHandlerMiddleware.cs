@@ -9,7 +9,6 @@ using Validacao.Senha.Domain.Enums;
 using Validacao.Senha.Domain.Exceptions;
 using Validacao.Senha.Domain.Extensions;
 using Validacao.Senha.Web.ViewModel;
-using System.Linq;
 
 namespace Validacao.Senha.Web.Middleware
 {

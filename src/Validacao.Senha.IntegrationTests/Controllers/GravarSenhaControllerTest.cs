@@ -1,13 +1,9 @@
-﻿using Newtonsoft.Json;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Validacao.Senha.Application.Command;
-using Validacao.Senha.Application.Query;
 using Validacao.Senha.Domain.Enums;
-using Validacao.Senha.Web.ViewModel;
 
 namespace Validacao.Senha.IntegrationTests.Controllers
 {

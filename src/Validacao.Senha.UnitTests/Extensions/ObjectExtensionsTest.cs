@@ -57,7 +57,6 @@ namespace Validacao.Senha.UnitTests.Extensions
             Assert.DoesNotThrow(() => @object.CriaLista());
         }
 
-
         [Test]
         public void ToStringContent_Converter_Sucess()
         {

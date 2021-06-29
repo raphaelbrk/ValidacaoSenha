@@ -15,7 +15,7 @@ namespace Validacao.Senha.UnitTests.Extensions
         [Test]
         public void Enum_Description_Sucess()
         {
-            Assert.DoesNotThrow(() => AcaoEncryptionEnum.Encrypt.ObterDescricao());
+            Assert.DoesNotThrow(() => AcaoEncryptionEnum.Criptografar.ObterDescricao());
         }
 
         [Test]

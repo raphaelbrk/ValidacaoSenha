@@ -18,7 +18,7 @@ namespace Validacao.Senha.Domain.Helpers
         {
             if (string.IsNullOrWhiteSpace(senha)) return string.Empty;
 
-            if (senha.EhNuloOuExisteEspaco()) throw new EncriptacaoPossuiEspacoException(AcaoEncryptionEnum.Encrypt);
+            if (senha.EhNuloOuExisteEspaco()) throw new EncriptacaoPossuiEspacoException(AcaoEncryptionEnum.Criptografar);
 
             byte[] clearBytes = Encoding.Unicode.GetBytes(senha);
             using (Aes encryptor = Aes.Create())
