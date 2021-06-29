@@ -71,14 +71,6 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 ```
 📦src
- ┣ 📂.vs
- ┃ ┗ 📂ValidacaoSenha
- ┃ ┃ ┗ 📂v16
- ┃ ┃ ┃ ┣ 📂TestStore
- ┃ ┃ ┃ ┃ ┗ 📂0
- ┃ ┃ ┃ ┃ ┃ ┣ 📜001.testlog
- ┃ ┃ ┃ ┃ ┃ ┗ 📜testlog.manifest
- ┃ ┃ ┃ ┗ 📜.suo
  ┣ 📂Validacao.Senha.Application
  ┃ ┣ 📂Authorization
  ┃ ┃ ┗ 📜TokenAuthorization.cs
