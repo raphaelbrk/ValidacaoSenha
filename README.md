@@ -61,4 +61,121 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Utilização do Regex separadamente. Para ter uma maior entendimento e retornar as validações separadamente para os usuários. 
 - Implementação do repositório MongoDB. Mesmo que o escopo inicial não pedisse, tive a proatividade de mostrar mais da minha implementação.
 - Implementação de alguns padrões de projetos normalmente utilizados e outros para demostrar o meu nivel de conhecimento.
-- Utilização do Clean Code a risca.
+- Utilização do Clean Code.
+
+Estrutura do Projeto:
+
+📦src
+ ┣ 📂Validacao.Senha.Application 
+ ┃ ┣ 📂Authorization
+ ┃ ┃ ┗ 📜GerarTokenAuthorization.cs
+ ┃ ┣ 📂Base
+ ┃ ┃ ┗ 📜BaseSenhaQueryCommand.cs
+ ┃ ┣ 📂Command
+ ┃ ┃ ┗ 📜GravarSenhaCommand.cs
+ ┃ ┣ 📂Context
+ ┃ ┃ ┗ 📜NotificacaoContext.cs
+ ┃ ┣ 📂Handler
+ ┃ ┃ ┣ 📜GerarTokenHandler.cs
+ ┃ ┃ ┣ 📜GravarSenhaHandler.cs
+ ┃ ┃ ┗ 📜ValidarSenhaHandler.cs
+ ┃ ┣ 📂Interfaces
+ ┃ ┃ ┣ 📜IGerarTokenAuthorization.cs
+ ┃ ┃ ┗ 📜INotificacaoContext.cs
+ ┃ ┣ 📂Query
+ ┃ ┃ ┣ 📜GerarTokenSenhaQuery.cs
+ ┃ ┃ ┗ 📜ValidarSenhaQuery.cs
+ ┃ ┣ 📜DependencyInjection.cs
+ ┃ ┗ 📜Validacao.Senha.Application.csproj
+ ┣ 📂Validacao.Senha.Domain
+ ┃ ┣ 📂Constantes
+ ┃ ┃ ┣ 📜MensagensConstantes.cs
+ ┃ ┃ ┣ 📜RegexConstantes.cs
+ ┃ ┃ ┗ 📜SenhaConstantes.cs
+ ┃ ┣ 📂Entities
+ ┃ ┃ ┣ 📜BaseAbstractEntity.cs
+ ┃ ┃ ┣ 📜BaseEntity.cs
+ ┃ ┃ ┣ 📜NotificacaoEntity.cs
+ ┃ ┃ ┗ 📜SenhaEntity.cs
+ ┃ ┣ 📂Enums
+ ┃ ┃ ┣ 📜AcaoEncryptionEnum.cs
+ ┃ ┃ ┣ 📜CodigoErrorValidacaoEnum.cs
+ ┃ ┃ ┣ 📜CodigoSucessoValidacaoEnum.cs
+ ┃ ┃ ┗ 📜RetornoEnum.cs
+ ┃ ┣ 📂Exceptions
+ ┃ ┃ ┣ 📜EncriptacaoPossuiEspacoException.cs
+ ┃ ┃ ┣ 📜EnumDescricaoNuloReferenceException.cs
+ ┃ ┃ ┣ 📜ForbiddenAccessException.cs
+ ┃ ┃ ┗ 📜NotFoundException.cs
+ ┃ ┣ 📂Extensions
+ ┃ ┃ ┣ 📜EnumExtensions.cs
+ ┃ ┃ ┣ 📜ObjetoExtensions.cs
+ ┃ ┃ ┗ 📜StringExtensions.cs
+ ┃ ┣ 📂Helpers
+ ┃ ┃ ┣ 📜CriptografarHelper.cs
+ ┃ ┃ ┣ 📜DescriptografarHelper.cs
+ ┃ ┃ ┗ 📜ValidarSenhaHelper.cs
+ ┃ ┣ 📂Validations
+ ┃ ┃ ┗ 📜SenhaValidator.cs
+ ┃ ┗ 📜Validacao.Senha.Domain.csproj
+ ┣ 📂Validacao.Senha.Infrastructure
+ ┃ ┣ 📂Context
+ ┃ ┃ ┗ 📜MongoContext.cs
+ ┃ ┣ 📂Interfaces
+ ┃ ┃ ┣ 📜IMongoContext.cs
+ ┃ ┃ ┣ 📜IRepository.cs
+ ┃ ┃ ┣ 📜ISenhaRepository.cs
+ ┃ ┃ ┗ 📜IUnitOfWork.cs
+ ┃ ┣ 📂Mappings
+ ┃ ┃ ┗ 📜SenhaMap.cs
+ ┃ ┣ 📂Persistence
+ ┃ ┃ ┗ 📜MongoDbPersistence.cs
+ ┃ ┣ 📂Repositories
+ ┃ ┃ ┣ 📜BaseRepository.cs
+ ┃ ┃ ┗ 📜SenhaRepository.cs
+ ┃ ┣ 📂UoW
+ ┃ ┃ ┗ 📜UnitOfWork.cs
+ ┃ ┣ 📜DependencyInjection.cs
+ ┃ ┗ 📜Validacao.Senha.Infrastructure.csproj
+ ┣ 📂Validacao.Senha.IntegrationTests
+ ┃ ┣ 📂Controllers
+ ┃ ┃ ┣ 📜TokenControllerTest.cs
+ ┃ ┃ ┗ 📜ValidarControllerTest.cs
+ ┃ ┣ 📜BaseTest.cs
+ ┃ ┗ 📜Validacao.Senha.IntegrationTests.csproj
+ ┣ 📂Validacao.Senha.UnitTests
+ ┃ ┣ 📂Extensions
+ ┃ ┃ ┣ 📜EnumExtensionsTest.cs
+ ┃ ┃ ┣ 📜ObjectExtensionsTest.cs
+ ┃ ┃ ┗ 📜StringExtensionsTest.cs
+ ┃ ┣ 📂Helpers
+ ┃ ┃ ┣ 📜CriptografarHelperTest.cs
+ ┃ ┃ ┗ 📜DescriptografarHelperTest.cs
+ ┃ ┣ 📂Validations
+ ┃ ┃ ┗ 📜SenhaValidatorTest.cs
+ ┃ ┣ 📜BaseTest.cs
+ ┃ ┗ 📜Validacao.Senha.UnitTests.csproj
+ ┣ 📂Validacao.Senha.Web
+ ┃ ┣ 📂Controllers
+ ┃ ┃ ┣ 📜BaseController.cs
+ ┃ ┃ ┣ 📜GravarSenhaController.cs
+ ┃ ┃ ┣ 📜TokenController.cs
+ ┃ ┃ ┗ 📜ValidarController.cs
+ ┃ ┣ 📂Filters
+ ┃ ┃ ┣ 📜ApiExceptionFilterAttribute.cs
+ ┃ ┃ ┗ 📜NotificacaoFilter.cs
+ ┃ ┣ 📂Middleware
+ ┃ ┃ ┗ 📜ErrorHandlerMiddleware.cs
+ ┃ ┣ 📂Properties
+ ┃ ┃ ┗ 📜launchSettings.json
+ ┃ ┣ 📂ViewModel
+ ┃ ┃ ┗ 📜RetornoViewModel.cs
+ ┃ ┣ 📜appsettings.Development.json
+ ┃ ┣ 📜appsettings.json
+ ┃ ┣ 📜Dockerfile
+ ┃ ┣ 📜Program.cs
+ ┃ ┣ 📜Startup.cs
+ ┃ ┣ 📜Validacao.Senha.Web.csproj
+ ┃ ┣ 📜Validacao.Senha.Web.csproj.user
+ ┃ ┗ 📜Validacao.Senha.Web.xml
+ ┗ 📜ValidacaoSenha.sln
