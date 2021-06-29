@@ -8,7 +8,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     ports:
-      - 27019:27017
+      - 27017:27017
     volumes:
       - mongodb_data_container:/data/db
       
@@ -16,5 +16,5 @@ volumes:
   mongodb_data_container:
 
 networks: 
-  broker-validacao-senha:
+  broker-mongodb:
     driver: bridge
