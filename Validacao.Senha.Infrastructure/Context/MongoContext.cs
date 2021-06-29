@@ -53,13 +53,11 @@ namespace Validacao.Senha.Infrastructure.Context
 
             using (Sessao = await MongoClient.StartSessionAsync())
             {
-                Sessao.StartTransaction();
 
                 var commandTasks = _comandos.Select(c => c());
 
                 await Task.WhenAll(commandTasks);
 
-                await Sessao.CommitTransactionAsync();
             }
 
             return _comandos.Count;
@@ -72,9 +70,28 @@ namespace Validacao.Senha.Infrastructure.Context
                 return;
             }
 
-            MongoClient = new MongoClient(_configuration["MongoSettings:Connection"]);
+            var username = _configuration.GetSection("ConnectionStrings:MongoDB").GetSection("Username").Value;
+            var password = _configuration.GetSection("ConnectionStrings:MongoDB").GetSection("Password").Value;
+            var mongoDbAuthMechanism = _configuration.GetSection("ConnectionStrings:MongoDB").GetSection("AuthMechanism").Value;
+            var databasename = _configuration.GetSection("ConnectionStrings:MongoDB").GetSection("Database").Value;
+            var mongoHost = _configuration.GetSection("ConnectionStrings:MongoDB").GetSection("Host").Value;
+            var port = Convert.ToInt32(_configuration.GetSection("ConnectionStrings:MongoDB").GetSection("Port").Value);
 
-            Database = MongoClient.GetDatabase(_configuration["MongoSettings:DatabaseName"]);
+            var internalIdentity = new MongoInternalIdentity(databasename, username);
+            var passwordEvidence = new PasswordEvidence(password);
+            var mongoCredential = !string.IsNullOrWhiteSpace(mongoDbAuthMechanism)
+                ? new MongoCredential(mongoDbAuthMechanism, internalIdentity, passwordEvidence)
+                : null;
+
+            var settings = new MongoClientSettings
+            {
+                Server = new MongoServerAddress(mongoHost, port)
+            };
+
+            if (mongoCredential != null) settings.Credential = mongoCredential;
+
+            MongoClient = new MongoClient(settings);
+            Database = MongoClient.GetDatabase(databasename);
         }
     }
 }
