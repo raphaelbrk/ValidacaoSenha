@@ -194,7 +194,6 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
    > **_Nota:_** Essa etapa, é executada apenas caso queira testar a parte de gravação e executar os testes unitários.
    
    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/dockercomposeup.jpg?raw=true)
-   </br>
     <b>2)</b> Executar a aplicação Validacao.Senha.Web, por comando, dotnet run ou pelo visual studio ou code.
     <b>3)</b> Após executar com sucesso, acessar a página do swagger, pela seguite url: http://localhost:9001/swagger
     </br>
@@ -205,16 +204,15 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
     ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/tokengerado.jpg?raw=true)
     ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/inclusao-authorize.jpg?raw=true)
     </br>
-    <b>5)</b>Após ser autorizado na API de Validação de Senha, agora você pode utilizar o endpoint para validar sua senha. O endpoint é Validar/Post. Segue o contrato do endpoint:
-
+    <b>5)</b>Após ser autorizado na API de Validação de Senha, agora você pode utilizar o endpoint para validar sua senha. O endpoint é Validar/Post. Segue o contrato do endpoint: 
     ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/validar-post.jpg?raw=true)
-    
-     </br>
-    ```
-    {
-	    "Conteudo":"informar_senha"
+
+   ```
+    { 
+      "Conteudo":"informar_senha"
     } 
-    ```
+  ```
+ 
    
     
     
