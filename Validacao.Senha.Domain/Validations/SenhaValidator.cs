@@ -92,6 +92,7 @@ namespace Validacao.Senha.Domain.Validations
                 .WithMessage(MensagensConstantes.SENHA_PELO_MENOS_UM_DIGITO_NUMERICO)
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error05.ObterDescricao());
         }
+
         #endregion "Validações"
     }
 }

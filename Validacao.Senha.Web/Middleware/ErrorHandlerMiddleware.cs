@@ -8,7 +8,6 @@ using Validacao.Senha.Domain.Exceptions;
 
 namespace Validacao.Senha.Web.Middleware
 {
-
     public class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;
@@ -32,20 +31,23 @@ namespace Validacao.Senha.Web.Middleware
                 switch (error)
                 {
                     case EncriptacaoPossuiEspacoException e:
-                        response.StatusCode = (int) HttpStatusCode.InternalServerError;
+                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;
+
                     case EnumDescricaoNuloReferenceException e:
-                        response.StatusCode = (int) HttpStatusCode.InternalServerError;
+                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;
+
                     case KeyNotFoundException e:
-                        response.StatusCode = (int) HttpStatusCode.NotFound;
+                        response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
+
                     default:
-                        response.StatusCode = (int) HttpStatusCode.InternalServerError;
+                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;
                 }
 
-                var result = JsonSerializer.Serialize(new {message = error?.Message});
+                var result = JsonSerializer.Serialize(new { message = error?.Message });
                 await response.WriteAsync(result);
             }
         }

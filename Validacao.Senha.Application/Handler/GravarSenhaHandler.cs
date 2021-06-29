@@ -31,7 +31,7 @@ namespace Validacao.Senha.Application.Handler
 
         public async Task<object> Handle(GravarSenhaCommand request, CancellationToken cancellationToken)
         {
-            var senha = new SenhaEntity(request.Conteudo);
+            var senha = new SenhaEntity(request.Conteudo.ToString());
             if (!senha.Validar()) _notificationContext.Adicionar(senha.ValidacaoResult);
             else
             {

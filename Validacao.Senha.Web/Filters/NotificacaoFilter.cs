@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using System.Net;
@@ -38,7 +39,7 @@ namespace Validacao.Senha.Web.Filters
             context.HttpContext.Response.StatusCode = (int)statusCode;
             context.HttpContext.Response.ContentType = "application/json";
 
-            var retorno = new RetornoViewModel(_notificacaoContext.Notificacoes);
+            var retorno = new RetornoViewModel(_notificacaoContext.Notificacoes?.ToList());
 
             var notifications = JsonConvert.SerializeObject(retorno);
             await context.HttpContext.Response.WriteAsync(notifications);

@@ -7,7 +7,7 @@ namespace Validacao.Senha.UnitTests.Extensions
     /// Classe responsável em executar os testes de classe de extensão de objetos.
     /// </summary>
     /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
-    public class ObjectExtensionsTest : BaseTest
+    internal class ObjectExtensionsTest : BaseTest
     {
         [Test]
         public void IsNull_Sucess()

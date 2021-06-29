@@ -1,5 +1,4 @@
 ﻿using System.Text.RegularExpressions;
-using Validacao.Senha.Domain.Extensions;
 
 namespace Validacao.Senha.Domain.Helpers
 {

@@ -10,7 +10,7 @@ namespace Validacao.Senha.UnitTests.Extensions
     /// Classe responsável em executar os testes de classe de extensão de enumeradores.
     /// </summary>
     /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
-    public class EnumExtensionsTest : BaseTest
+    internal class EnumExtensionsTest : BaseTest
     {
         [Test]
         public void Enum_Description_Sucess()

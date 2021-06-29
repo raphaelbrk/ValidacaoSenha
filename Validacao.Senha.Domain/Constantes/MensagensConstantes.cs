@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Validacao.Senha.Domain.Constantes
+﻿namespace Validacao.Senha.Domain.Constantes
 {
     /// <summary>
     /// Classe responsável em guardar as constantes das mensagens das aplicações. Por exemplo: Validações.
@@ -24,7 +18,6 @@ namespace Validacao.Senha.Domain.Constantes
         public static string SENHA_COM_CARACTER_REPETIDO = "A senha não deve conter caracter repetido.";
 
         public static string SENHA_COM_ESPACO = "A senha não deve conter espaço.";
-
 
         public static string SENHA_CORRETO = "A senha está correta.";
     }

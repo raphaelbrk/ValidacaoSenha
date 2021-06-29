@@ -8,7 +8,6 @@ namespace Validacao.Senha.Application.Query
     /// <seealso cref="Validacao.Senha.Application.Base.GerarTokenSenhaQuery" />
     public class GerarTokenSenhaQuery : BaseSenhaQueryCommand
     {
-
         public GerarTokenSenhaQuery(string conteudo) : base(conteudo)
         {
         }

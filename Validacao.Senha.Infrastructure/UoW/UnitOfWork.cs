@@ -4,7 +4,7 @@ using Validacao.Senha.Infrastructure.Interfaces;
 namespace Validacao.Senha.Infrastructure.UoW
 {
     /// <summary>
-    ///  Classe responsável para transação e coordenada ao MongoDB. 
+    ///  Classe responsável para transação e coordenada ao MongoDB.
     /// </summary>
     /// <seealso cref="Validacao.Senha.Infrastructure.Interfaces.IUnitOfWork" />
     public class UnitOfWork : IUnitOfWork

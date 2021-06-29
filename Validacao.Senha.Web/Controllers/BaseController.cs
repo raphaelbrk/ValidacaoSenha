@@ -1,10 +1,8 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Validacao.Senha.Application.Command;
-using Validacao.Senha.Application.Query;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Validacao.Senha.Web.Controllers
 {
@@ -36,22 +34,5 @@ namespace Validacao.Senha.Web.Controllers
             var id = await _mediator.Send(comando);
             return Ok(id);
         }
-
-
-        [HttpGet]
-        [AllowAnonymous]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public virtual async Task<IActionResult> Get()
-        {
-            var comando = new GerarTokenSenhaQuery(string.Empty);
-            var id = await _mediator.Send(comando);
-            return Ok(id);
-        }
-
-
     }
 }

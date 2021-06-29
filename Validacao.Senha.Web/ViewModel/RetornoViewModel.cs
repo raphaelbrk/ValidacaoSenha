@@ -1,18 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Validacao.Senha.Domain.Entities;
+using Validacao.Senha.Domain.Enums;
 
 namespace Validacao.Senha.Web.ViewModel
 {
     public class RetornoViewModel
     {
-        public IReadOnlyCollection<NotificacaoEntity> Notificacoes;
+        public List<NotificacaoEntity> Notificacoes;
 
-        public RetornoViewModel(IReadOnlyCollection<NotificacaoEntity> notificacao)
+        public RetornoViewModel(List<NotificacaoEntity> notificacao)
         {
             Notificacoes = notificacao;
         }
 
-        public bool Valido => Notificacoes?.Any(x => x.Valido) is true;
+        public bool Valido => Notificacoes?.Any(x => x.Retorno.Equals(RetornoEnum.Sucesso)) is true;
     }
 }

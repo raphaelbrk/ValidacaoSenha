@@ -9,7 +9,7 @@ namespace Validacao.Senha.UnitTests.Validations
     /// Classe responsável em executar os testes unitários das validações.
     /// </summary>
     /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
-    public class SenhaValidatorTest : BaseTest
+    internal class SenhaValidatorTest : BaseTest
     {
         [Test]
         public void Validar_Senha_Pelo_Menos_Um_Caracter_Especial_Falha()
@@ -110,7 +110,6 @@ namespace Validacao.Senha.UnitTests.Validations
 
             Assert.IsTrue(!senha.ValidacaoResult.Errors.Any(x => x.ErrorMessage.Equals(MensagensConstantes.SENHA_NAO_INFORMADA)));
         }
-
 
         [Test]
         public void Validar_Senha_Valor_Caracter_Repetido_Falha()

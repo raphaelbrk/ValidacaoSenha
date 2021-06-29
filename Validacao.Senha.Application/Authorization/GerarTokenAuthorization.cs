@@ -1,13 +1,9 @@
-﻿using System;
-using FluentValidation.Results;
-using System.Collections.Generic;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 using Validacao.Senha.Application.Authorization;
-using Validacao.Senha.Domain.Entities;
-using Validacao.Senha.Domain.Enums;
 
 namespace Validacao.Senha.Application.Interfaces
 {
@@ -16,8 +12,8 @@ namespace Validacao.Senha.Application.Interfaces
     /// </summary>
     public class GerarTokenAuthorization : IGerarTokenAuthorization
     {
-
         private readonly IConfiguration _configuration;
+
         public GerarTokenAuthorization(IConfiguration Configuration)
         {
             _configuration = Configuration;

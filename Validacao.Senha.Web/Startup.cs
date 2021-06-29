@@ -1,13 +1,9 @@
-using System;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Validacao.Senha.Application;
 using Validacao.Senha.Infrastructure;
@@ -18,7 +14,6 @@ namespace Validacao.Senha.Web
 {
     public class Startup
     {
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -60,9 +55,7 @@ namespace Validacao.Senha.Web
             services.AddControllers(options => options.Filters.Add<NotificacaoFilter>());
             services.ConfigureInfrastructure();
             services.ConfigureApplication(Configuration);
-
             IdentityModelEventSource.ShowPII = true;
-
 
             services.AddSwaggerGen(c =>
             {
@@ -95,7 +88,6 @@ namespace Validacao.Senha.Web
                             }
                         },
                         new string[] {}
-
                     }
                 });
             });

@@ -8,7 +8,7 @@ namespace Validacao.Senha.UnitTests.Helpers
     /// Classe responsável em executar os testes de criptografar a senha.
     /// </summary>
     /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
-    public class CriptografarHelperTest : BaseTest
+    internal class CriptografarHelperTest : BaseTest
     {
         private const string SENHA_COM_ESPACO_DECPRTY = "teste123  123";
 

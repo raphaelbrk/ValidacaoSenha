@@ -7,7 +7,6 @@ using Validacao.Senha.Application.Query;
 using Validacao.Senha.Domain.Constantes;
 using Validacao.Senha.Domain.Entities;
 using Validacao.Senha.Domain.Enums;
-using Validacao.Senha.Domain.Exceptions;
 using Validacao.Senha.Domain.Extensions;
 
 namespace Validacao.Senha.Application.Handler
@@ -28,7 +27,7 @@ namespace Validacao.Senha.Application.Handler
 
         public async Task<object> Handle(ValidarSenhaQuery request, CancellationToken cancellationToken)
         {
-            var senha = new SenhaEntity(request.Conteudo);
+            var senha = new SenhaEntity(request.Conteudo.ToString());
             if (!senha.Validar()) _notificationContext.Adicionar(senha.ValidacaoResult);
             else _notificationContext.Adicionar(new NotificacaoEntity(CodigoSucessoValidacaoEnum.Sucesso01.ObterDescricao(), MensagensConstantes.SENHA_CORRETO, RetornoEnum.Sucesso));
 

@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using Validacao.Senha.Domain.Extensions;
-using Validacao.Senha.Domain.Helpers;
 
 namespace Validacao.Senha.UnitTests.Extensions
 {
@@ -8,7 +7,7 @@ namespace Validacao.Senha.UnitTests.Extensions
     /// Classe responsável em executar os testes de classe de extensão de strings.
     /// </summary>
     /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
-    public class StringExtensionsTest : BaseTest
+    internal class StringExtensionsTest : BaseTest
     {
         [Test]
         public void Encrypt_String_Preenchida_Sem_Espaco_Sucess()

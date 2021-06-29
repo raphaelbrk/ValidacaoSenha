@@ -1,9 +1,9 @@
-﻿using System.Text;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using Validacao.Senha.Application.Authorization;
 using Validacao.Senha.Application.Context;
 using Validacao.Senha.Application.Interfaces;

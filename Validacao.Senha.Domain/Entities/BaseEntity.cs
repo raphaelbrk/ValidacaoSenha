@@ -15,7 +15,6 @@ namespace Validacao.Senha.Domain.Entities
         protected BaseEntity()
         {
             Id = Guid.NewGuid();
-            Valido = true;
         }
 
         [JsonIgnore]
@@ -24,8 +23,7 @@ namespace Validacao.Senha.Domain.Entities
         [JsonIgnore]
         public ValidationResult ValidacaoResult { get; private set; }
 
-        [JsonIgnore]
-        public bool Valido { get; private set; }
+        [JsonIgnore] public bool Valido { get; private set; } = true;
 
         protected bool Validar<TEntity>(TEntity model, AbstractValidator<TEntity> validator)
         {
