@@ -26,6 +26,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - Docker (DockerFile e Docker-Compose).
  - FluentValidation.
  - Regex.
+ - Microsoft.AspNetCore.Mvc.Testing
 
  ## Padrões de Projetos Utilizados: ##
  - Generic Repository Pattern.
@@ -46,8 +47,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
   - Principio do DDD (Insolamento do Dominio da Aplicação);
 
 ## Arquitetura Utilizada: Clean Architecture: ##
-</br>
-<b>Motivos:</b>
+
 - Independência de Framework.
 - Independência de identidade.
 - Independência de banco de dados.
@@ -187,3 +187,10 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┗ 📜ValidacaoSenha.sln
  ```
 
+## Execução da Aplicação ##
+
+  <b>1)</b> Primeiramente, execute o docker-compose up -d para iniciar a instancia do MongoDB. 
+  </br>
+   > **_Nota:_** Essa etapa, é executar apenas Caso queira testar a parte de gravação e executar os testes unitários.
+
+   ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/dockercomposeup.jpg?raw=true)
