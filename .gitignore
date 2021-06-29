@@ -3,3 +3,16 @@
 ################################################################################
 
 /Validacao.Senha.Application/bin/Debug/net5.0
+/Validacao.Senha.Domain/obj
+/Validacao.Senha.Domain/bin/Debug/net5.0
+/Validacao.Senha.Application/obj
+/Validacao.Senha.Infrastructure/obj
+/Validacao.Senha.Infrastructure/bin/Debug/net5.0
+/Validacao.Senha.IntegrationTests/bin/Debug/net5.0
+/Validacao.Senha.IntegrationTests/obj
+/Validacao.Senha.UnitTests/bin/Debug/net5.0
+/Validacao.Senha.UnitTests/obj
+/Validacao.Senha.Web/bin/Debug/net5.0
+/Validacao.Senha.Web/obj
+/.vs/ValidacaoSenha/DesignTimeBuild
+/.vs/ValidacaoSenha/v16/TestStore/0
