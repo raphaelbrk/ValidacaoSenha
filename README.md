@@ -1,16 +1,21 @@
 # ValidacaoSenha
 
-Esse projeto foi desenvolvimento na tecnologia .NET 5 para a validação de senha. 
+Esse projeto foi desenvolvimento na tecnologia .NET 5 para a validação de senha. Este projeto segue as seguintes regras para validação:
 
-- Nove ou mais caracteres
-- Ao menos 1 dígito
-- Ao menos 1 letra minúscula
-- Ao menos 1 letra maiúscula
-- Ao menos 1 caractere especial
-- Considere como especial os seguintes caracteres: !@#$%^&*()-+
-- Não possuir caracteres repetidos dentro do conjunto
+- Nove ou mais caracteres.
+- Ao menos 1 dígito.
+- Ao menos 1 letra minúscula.
+- Ao menos 1 letra maiúscula.
+- Ao menos 1 caractere especial.
+- Considere como especial os seguintes caracteres: !@#$%^&*()-+.
+- Não possuir caracteres repetidos dentro do conjunto.
 
-<b>Tecnologias Utilizadas</b>
+As regras estão desacopladas e são validadas separadamente. 
+
+
+Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias utilizadas:
+
+<b>Tecnologias Utilizadas:</b>
 
  - .NET 5.
  - MongoDB.
@@ -21,22 +26,31 @@ Esse projeto foi desenvolvimento na tecnologia .NET 5 para a validação de senh
  - Newtonsoft.Json.
  - Docker (DockerFile e Docker-Compose).
  - FluentValidation.
+ - Regex.
 
  <b>Padrões de Projetos Utilizados:</b>
  - Generic Repository Pattern.
  - Unit of Work Paterrn.
  - Notification Pattern.
- - Middleware pattern.
+ - Middleware Pattern.
  - Singleton Pattern.
- - Inversion of control Pattern.
+ - Inversion of Control Pattern.
  - Interceptor Pattern.
+ - Command Pattern.
+ - Dependency Injection Pattern.
 
   <b>Metodologias Utilizadas</b>
   - Clean Code.
   - SOLID.
   - TDD.
   - Documentação de Classes.
+  - Principio do DDD (Insolamento do Dominio da Aplicação);
 
 <b>Arquitetura Utilizada: Clean Architecture</b>
-Motivos: 1 - Independência de Framework / Independência de identidade / Independência de banco de dados /Independência de qualquer elemento externo / Ter estabilidade
+Motivos: 
+- Independência de Framework.
+- Independência de identidade.
+- Independência de banco de dados.
+- Independência de qualquer elemento externo.
+- Ter uma maior estabilidade.
  

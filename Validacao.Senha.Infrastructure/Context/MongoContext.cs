@@ -57,7 +57,6 @@ namespace Validacao.Senha.Infrastructure.Context
                 var commandTasks = _comandos.Select(c => c());
 
                 await Task.WhenAll(commandTasks);
-
             }
 
             return _comandos.Count;

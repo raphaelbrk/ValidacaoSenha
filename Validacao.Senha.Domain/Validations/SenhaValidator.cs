@@ -31,6 +31,7 @@ namespace Validacao.Senha.Domain.Validations
             ValidarSenhaPeloMenosUmCaracterEspecial();
             ValidarSenhaCaracterRepetido();
             ValidarSenhaComEspaco();
+            ValidarSenhaComMaisOuIgualNoveCaracter();
         }
 
         #region "Validações"
@@ -43,7 +44,6 @@ namespace Validacao.Senha.Domain.Validations
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error06.ObterDescricao());
         }
 
-        //TODO: validar
         private void ValidarSenhaComEspaco()
         {
             RuleFor(a => a.Conteudo)
@@ -51,6 +51,14 @@ namespace Validacao.Senha.Domain.Validations
                 .When(x => !string.IsNullOrWhiteSpace(x.Conteudo))
                 .WithMessage(MensagensConstantes.SENHA_COM_ESPACO)
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error07.ObterDescricao());
+        }
+
+        private void ValidarSenhaComMaisOuIgualNoveCaracter()
+        {
+            RuleFor(a => a.ConteudoCriptografado)
+                .Must(x => x.Validar(RegexConstantes.REGEX_IGUAL_NOVE_OU_MAIS_CARACTERES))
+                .WithMessage(MensagensConstantes.SENHA_COM_MENOS_NOVE_CARACTERES)
+                .OverridePropertyName(CodigoErrorValidacaoEnum.Error08.ObterDescricao());
         }
 
         private void ValidarSenhaNaoInformarda()

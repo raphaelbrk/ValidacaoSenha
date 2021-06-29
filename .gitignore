@@ -16,3 +16,5 @@
 /Validacao.Senha.Web/obj
 /.vs/ValidacaoSenha/DesignTimeBuild
 /.vs/ValidacaoSenha/v16/TestStore/0
+/Validacao.Senha.IntegrationTests/bin/Release/net5.0
+/Validacao.Senha.UnitTests/bin/Release/net5.0

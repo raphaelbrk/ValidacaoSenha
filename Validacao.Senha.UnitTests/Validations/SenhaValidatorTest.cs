@@ -151,6 +151,26 @@ namespace Validacao.Senha.UnitTests.Validations
             Assert.IsTrue(!senha.ValidacaoResult.Errors.Any(x => x.ErrorMessage.Equals(MensagensConstantes.SENHA_COM_ESPACO)));
         }
 
+        [Test]
+        public void Validar_Senha_Pelo_Menos_Nove_Ou_Mais_Caracteres_Sucesso()
+        {
+            var senha = CriarSenha("AbTp9!fok");
+
+            _ = senha.Validar();
+
+            Assert.IsTrue(!senha.ValidacaoResult.Errors.Any(x => x.ErrorMessage.Equals(MensagensConstantes.SENHA_COM_MENOS_NOVE_CARACTERES)));
+        }
+
+        [Test]
+        public void Validar_Senha_Pelo_Menos_Nove_Ou_Mais_Caracteres_Falha()
+        {
+            var senha = CriarSenha("AbTp9!fo");
+
+            _ = senha.Validar();
+
+            Assert.IsFalse(!senha.ValidacaoResult.Errors.Any(x => x.ErrorMessage.Equals(MensagensConstantes.SENHA_COM_MENOS_NOVE_CARACTERES)));
+        }
+
         private SenhaEntity CriarSenha(string senha)
         {
             return new SenhaEntity(senha);

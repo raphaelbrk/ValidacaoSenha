@@ -32,6 +32,9 @@ namespace Validacao.Senha.Domain.Enums
         Error07,
 
         [Description("ERROR-GLOBAL-01")]
-        ErrorGlobal01
+        ErrorGlobal01,
+
+        [Description("ERROR-08")]
+        Error08,
     }
 }

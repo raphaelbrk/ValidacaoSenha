@@ -19,6 +19,8 @@
 
         public static string SENHA_COM_ESPACO = "A senha não deve conter espaço.";
 
+        public static string SENHA_COM_MENOS_NOVE_CARACTERES = "A senha deve conter mais de nove caracter.";
+
         public static string SENHA_CORRETO = "A senha está correta.";
     }
 }
