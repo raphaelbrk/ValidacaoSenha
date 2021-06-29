@@ -26,7 +26,7 @@ namespace Validacao.Senha.UnitTests.Extensions
         }
 
         [Test]
-        public void IsNotNull_Sucess()
+        public void IsNotNull_Sucesso()
         {
             object @object = new();
 
@@ -40,6 +40,23 @@ namespace Validacao.Senha.UnitTests.Extensions
 
             Assert.IsFalse(@object.NaoEhNulo());
         }
+
+        [Test]
+        public void CriarLista_Converter_Sucesso()
+        {
+            object @object = new { Teste = "teste" };
+
+            Assert.DoesNotThrow(() => @object.CriaLista());
+        }
+
+        [Test]
+        public void CriarLista_Converter_Nulo()
+        {
+            object @object = null;
+
+            Assert.DoesNotThrow(() => @object.CriaLista());
+        }
+
 
         [Test]
         public void ToStringContent_Converter_Sucess()

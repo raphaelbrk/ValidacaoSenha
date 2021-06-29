@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.Net.Http;
 using System.Text;
 
@@ -22,6 +23,14 @@ namespace Validacao.Senha.Domain.Extensions
         public static bool NaoEhNulo(this object @object)
         {
             return @object is not null;
+        }
+
+        public static List<T> CriaLista<T>(this T @object)
+        {
+            if (@object is null)
+                return new();
+
+            return new() { @object };
         }
     }
 }

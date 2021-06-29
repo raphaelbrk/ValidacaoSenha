@@ -4,7 +4,12 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Validacao.Senha.Domain.Entities;
+using Validacao.Senha.Domain.Enums;
 using Validacao.Senha.Domain.Exceptions;
+using Validacao.Senha.Domain.Extensions;
+using Validacao.Senha.Web.ViewModel;
+using System.Linq;
 
 namespace Validacao.Senha.Web.Middleware
 {
@@ -47,8 +52,10 @@ namespace Validacao.Senha.Web.Middleware
                         break;
                 }
 
-                var result = JsonSerializer.Serialize(new { message = error?.Message });
-                await response.WriteAsync(result);
+                var retorno = new NotificacaoEntity(CodigoErrorValidacaoEnum.ErrorGlobal01.ObterDescricao(),
+                    error?.Message, RetornoEnum.Inconsistencia);
+                var resultado = JsonSerializer.Serialize(new RetornoViewModel(retorno.CriaLista()));
+                await response.WriteAsync(resultado);
             }
         }
     }

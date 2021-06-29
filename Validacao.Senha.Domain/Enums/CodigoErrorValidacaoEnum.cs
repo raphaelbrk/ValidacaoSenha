@@ -10,7 +10,7 @@ namespace Validacao.Senha.Domain.Enums
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CodigoErrorValidacaoEnum
     {
-        [Description("SUCESSO-01")]
+        [Description("ERROR-01")]
         Error01 = 1,
 
         [Description("ERROR-02")]
@@ -28,7 +28,10 @@ namespace Validacao.Senha.Domain.Enums
         [Description("ERROR-06")]
         Error06,
 
-        [Description("ERROR-0")]
+        [Description("ERROR-07")]
         Error07,
+
+        [Description("ERROR-GLOBAL-01")]
+        ErrorGlobal01
     }
 }
