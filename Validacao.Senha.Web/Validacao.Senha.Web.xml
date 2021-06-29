@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Validacao.Senha.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Validacao.Senha.Web.Controllers.GravacaoController.Post(Validacao.Senha.Application.Command.GravacaoSenhaCommand)">
+            <summary>
+            Posts the specified comando.
+            </summary>
+            <param name="comando">The comando.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Validacao.Senha.Web.Controllers.ValidacaoController.Post(Validacao.Senha.Application.Query.ValidacaoSenhaQuery)">
+            <summary>
+            Endpoint para validação da senha.
+            </summary>
+            <param name="query">Dados da senha.</param>
+            <returns>retorno validação das senhas</returns>
+        </member>
+    </members>
+</doc>
