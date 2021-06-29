@@ -196,6 +196,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/dockercomposeup.jpg?raw=true)
     <br>
     <b>2)</b> Executar a aplicação Validacao.Senha.Web, por comando, dotnet run ou pelo visual studio ou code.
+    <br>
     <b>3)</b> Após executar com sucesso, acessar a página do swagger, pela seguite url: http://localhost:9001/swagger
     <br>
     ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/pagina-swagger.jpg?raw=true)
