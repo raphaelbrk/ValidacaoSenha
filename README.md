@@ -187,7 +187,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┗ 📜ValidacaoSenha.sln
  ```
 
-## Execução da Aplicação ##
+## Execução da Aplicação - Validação de Senha ##
 
   <b>1)</b> Primeiramente, execute o docker-compose up -d para iniciar a instancia do MongoDB. 
   </br>
@@ -206,6 +206,31 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
     </br>
     <b>5)</b>Após ser autorizado na API de Validação de Senha, agora você pode utilizar o endpoint para validar sua senha. O endpoint é Validar/Post. Segue o contrato do endpoint: 
     ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/validar-post.jpg?raw=true)
+
+   ```
+    { 
+      "Conteudo":"informar_senha"
+    } 
+  ```
+ ## Execução da Aplicação - Gravação de Senha ##
+
+  <b>1)</b> Primeiramente, execute o docker-compose up -d para iniciar a instancia do MongoDB. 
+  </br>
+   > **_Nota:_** Essa etapa, é executada apenas caso queira testar a parte de gravação e executar os testes unitários.
+   
+   ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/dockercomposeup.jpg?raw=true)
+    <b>2)</b> Executar a aplicação Validacao.Senha.Web, por comando, dotnet run ou pelo visual studio ou code.
+    <b>3)</b> Após executar com sucesso, acessar a página do swagger, pela seguite url: http://localhost:9001/swagger
+    </br>
+    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/pagina-swagger.jpg?raw=true)
+    </br>
+    <b>4)</b> Após acessar, executar o endpoint Token/Get para a geração do Token JWT. Após fazer a geração do token copie o response, e ai cole no campo Authorize que fica no canto superior direito. Logo após colar, clique no botão Authorize.
+    </br>
+    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/tokengerado.jpg?raw=true)
+    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/inclusao-authorize.jpg?raw=true)
+    </br>
+    <b>5)</b>Após ser autorizado na API de Validação de Senha, agora você pode utilizar o endpoint para validar sua senha. O endpoint é GravarSenha/Post. Segue o contrato do endpoint: 
+    ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/gravar-senha.jpg?raw=true)
 
    ```
     { 
