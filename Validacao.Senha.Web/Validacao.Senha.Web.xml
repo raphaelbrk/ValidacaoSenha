@@ -4,19 +4,12 @@
         <name>Validacao.Senha.Web</name>
     </assembly>
     <members>
-        <member name="M:Validacao.Senha.Web.Controllers.GravacaoController.Post(Validacao.Senha.Application.Command.GravacaoSenhaCommand)">
+        <member name="T:Validacao.Senha.Web.Controllers.BaseController`1">
             <summary>
-            Posts the specified comando.
+            Classe base controller.
             </summary>
-            <param name="comando">The comando.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Validacao.Senha.Web.Controllers.ValidacaoController.Post(Validacao.Senha.Application.Query.ValidacaoSenhaQuery)">
-            <summary>
-            Endpoint para validação da senha.
-            </summary>
-            <param name="query">Dados da senha.</param>
-            <returns>retorno validação das senhas</returns>
+            <typeparam name="TEntity">Comandos para a execução da aplicação.</typeparam>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
         </member>
     </members>
 </doc>

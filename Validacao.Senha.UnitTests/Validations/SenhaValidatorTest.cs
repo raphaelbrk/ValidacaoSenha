@@ -5,7 +5,11 @@ using Validacao.Senha.Domain.Entities;
 
 namespace Validacao.Senha.UnitTests.Validations
 {
-    public class SenhaValidatorTest
+    /// <summary>
+    /// Classe responsável em executar os testes unitários das validações.
+    /// </summary>
+    /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
+    public class SenhaValidatorTest : BaseTest
     {
         [Test]
         public void Validar_Senha_Pelo_Menos_Um_Caracter_Especial_Falha()

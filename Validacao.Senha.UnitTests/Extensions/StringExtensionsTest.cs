@@ -4,6 +4,10 @@ using Validacao.Senha.Domain.Helpers;
 
 namespace Validacao.Senha.UnitTests.Extensions
 {
+    /// <summary>
+    /// Classe responsável em executar os testes de classe de extensão de strings.
+    /// </summary>
+    /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
     public class StringExtensionsTest : BaseTest
     {
         [Test]

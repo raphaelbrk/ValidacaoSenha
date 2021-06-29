@@ -4,6 +4,10 @@ using Validacao.Senha.Domain.Helpers;
 
 namespace Validacao.Senha.UnitTests.Helpers
 {
+    /// <summary>
+    /// Classe responsável em executar os testes de descriptografar a senha.
+    /// </summary>
+    /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
     public class DescriptografarHelperTest : BaseTest
     {
         private const string SENHA_COM_ESPACO_CRPTY = "uF0Zo65YbgQ3vZGOVOFLrQKHcf3lq7NLX456nZtdNv0=       ";

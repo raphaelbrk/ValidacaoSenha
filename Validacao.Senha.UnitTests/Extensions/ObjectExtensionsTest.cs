@@ -3,6 +3,10 @@ using Validacao.Senha.Domain.Extensions;
 
 namespace Validacao.Senha.UnitTests.Extensions
 {
+    /// <summary>
+    /// Classe responsável em executar os testes de classe de extensão de objetos.
+    /// </summary>
+    /// <seealso cref="Validacao.Senha.UnitTests.BaseTest" />
     public class ObjectExtensionsTest : BaseTest
     {
         [Test]
