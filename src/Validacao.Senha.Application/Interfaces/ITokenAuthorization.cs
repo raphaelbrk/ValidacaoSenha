@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface responsável para adicionar as notificações das validações do FluentValidation que será retornado para o usuário.
     /// </summary>
-    public interface IGerarTokenAuthorization
+    public interface ITokenAuthorization
     {
         public string Gerar();
     }

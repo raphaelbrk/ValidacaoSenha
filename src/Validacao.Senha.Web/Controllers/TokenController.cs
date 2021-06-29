@@ -7,6 +7,10 @@ using Validacao.Senha.Application.Query;
 
 namespace Validacao.Senha.Web.Controllers
 {
+    /// <summary>
+    /// Controller responsável em obter as requisições para geração do token JWT.
+    /// </summary>
+    /// <seealso cref="Validacao.Senha.Web.Controllers.BaseController{Validacao.Senha.Application.Query.GerarTokenSenhaQuery}" />
     public class TokenController : BaseController<GerarTokenSenhaQuery>
     {
         public TokenController(IMediator mediator) : base(mediator)

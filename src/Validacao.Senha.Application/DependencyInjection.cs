@@ -18,7 +18,7 @@ namespace Validacao.Senha.Application
         public static void ConfigureApplication(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<INotificacaoContext, NotificacaoContext>();
-            services.AddScoped<IGerarTokenAuthorization, GerarTokenAuthorization>();
+            services.AddScoped<ITokenAuthorization, TokenAuthorization>();
             services.AddMediatR(typeof(DependencyInjection).Assembly);
 
             services.AddAuthentication(options =>

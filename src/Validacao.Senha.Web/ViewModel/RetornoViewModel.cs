@@ -5,6 +5,9 @@ using Validacao.Senha.Domain.Enums;
 
 namespace Validacao.Senha.Web.ViewModel
 {
+    /// <summary>
+    /// Classe responsável em guardar as informações de retorno da API de validação de senha.
+    /// </summary>
     public class RetornoViewModel
     {
         public List<NotificacaoEntity> Notificacoes;

@@ -9,6 +9,10 @@ using Validacao.Senha.Web.ViewModel;
 
 namespace Validacao.Senha.Web.Filters
 {
+    /// <summary>
+    /// Classe responsável em filtrar e retornar as notificações das validações.
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter" />
     public class NotificacaoFilter : IAsyncResultFilter
     {
         private readonly INotificacaoContext _notificacaoContext;

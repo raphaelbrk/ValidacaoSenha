@@ -10,11 +10,11 @@ namespace Validacao.Senha.Application.Interfaces
     /// <summary>
     /// Classe responsável para geração do token JWT.
     /// </summary>
-    public class GerarTokenAuthorization : IGerarTokenAuthorization
+    public class TokenAuthorization : ITokenAuthorization
     {
         private readonly IConfiguration _configuration;
 
-        public GerarTokenAuthorization(IConfiguration Configuration)
+        public TokenAuthorization(IConfiguration Configuration)
         {
             _configuration = Configuration;
         }

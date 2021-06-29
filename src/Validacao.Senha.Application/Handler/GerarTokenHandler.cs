@@ -13,16 +13,16 @@ namespace Validacao.Senha.Application.Handler
     /// <seealso cref="Guid" />
     internal class GerarTokenHandler : IRequestHandler<GerarTokenSenhaQuery, object>
     {
-        private readonly IGerarTokenAuthorization _gerarTokenAuthorization;
+        private readonly ITokenAuthorization _tokenAuthorization;
 
-        public GerarTokenHandler(IGerarTokenAuthorization gerarTokenAuthorization)
+        public GerarTokenHandler(ITokenAuthorization tokenAuthorization)
         {
-            _gerarTokenAuthorization = gerarTokenAuthorization;
+            _tokenAuthorization = tokenAuthorization;
         }
 
         public async Task<object> Handle(GerarTokenSenhaQuery request, CancellationToken cancellationToken)
         {
-            return _gerarTokenAuthorization.Gerar();
+            return _tokenAuthorization.Gerar();
         }
     }
 }

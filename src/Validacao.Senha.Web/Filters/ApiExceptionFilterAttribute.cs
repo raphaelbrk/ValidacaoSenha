@@ -7,6 +7,10 @@ using Validacao.Senha.Domain.Exceptions;
 
 namespace Validacao.Senha.Web.Filters
 {
+    /// <summary>
+    /// Classe responsável em filtrar as expections customizadas.
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.Filters.ExceptionFilterAttribute" />
     public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {
         private readonly IDictionary<Type, Action<ExceptionContext>> _exceptionHandlers;

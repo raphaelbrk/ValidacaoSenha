@@ -13,6 +13,9 @@ using System.Linq;
 
 namespace Validacao.Senha.Web.Middleware
 {
+    /// <summary>
+    /// Middleware responsável em obter as execções globais da aplicação.
+    /// </summary>
     public class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;
