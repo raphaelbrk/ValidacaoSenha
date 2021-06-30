@@ -47,9 +47,6 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 ## Arquitetura Utilizada: Clean Architecture: ##
 
-<br>
-
-<br>
 - Independência de Framework.
 - Independência de identidade.
 - Independência de banco de dados.
