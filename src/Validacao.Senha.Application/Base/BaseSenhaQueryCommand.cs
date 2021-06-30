@@ -6,7 +6,7 @@ namespace Validacao.Senha.Application.Base
     /// <summary>
     /// Classe responsável por ser a classe base dos comandos e query do MediatR.
     /// </summary>
-    /// <seealso cref="MediatR.IRequest{System.Guid}" />
+    /// <seealso cref="MediatR.IRequest{System.string}" />
     public class BaseSenhaQueryCommand : IRequest<object>
     {
         public string Conteudo { get; }
