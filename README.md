@@ -54,20 +54,21 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Ter uma maior estabilidade.
 
 ## Outros Motivos de Decisão de Implementação: ##
- - Alteração no retorno da API para ao invés de retornar apenas um verdadeiro/falso, a aplicação retornará as inconsistências da validações de senha e se a validação foi verdadeiro ou não.
- - Implementação de uma criptografia básica para ter uma maior segurança na transferência das senhas entre as camandas e a persistência de banco. 
+ - Alteração no retorno da API para ao invés de retornar apenas um verdadeiro/falso, a aplicação retornará as inconsistências das validações de senha e se a validação foi verdadeiro ou falso.
+ - Implementação de uma criptografia básica para ter uma maior segurança na transferência das senhas entre as camandas e a persistência ao banco. 
  - Decisão de utilizar o Mediatr para abstrair o projeto da API com o projeto da Application, tendo a abstração através da interface do MediatR.
 - Utilização do Regex separadamente. Para ter uma maior entendimento e retornar as validações separadamente para os usuários. 
 - Implementação do repositório MongoDB. Mesmo que o escopo inicial não pedisse, tive a proatividade de mostrar mais da minha implementação.
 - Implementação de alguns padrões de projetos normalmente utilizados e outros para demostrar o meu nivel de conhecimento.
 - Utilização do Clean Code.
-- Utilização da aplicação autenticação JWT básica para ter uma segurança maior na API.
+- Utilização da autenticação JWT básica para ter uma segurança maior na API.
 - Utilização do CodeMaid para ordenar e adequar o código.
-- Utilização do Insomnia e Postman para tester fora do swagger.
+- Utilização do Insomnia e Postman para testar fora do swagger.
 - Criação de pastas para facilitar o entendimento e separar cada responsabilidade com Helpers, Extensions, Interfaces, Context, Command, Query, Handler, Constantes, Enums, Validations, Exceptions, Middleware, filters, etc.
 - Padronização das nomeclaturas de classes através de suas responsabilidades.
 - Padronização de nome de metódos no verbo infinitivo.
 - Responsabilidade unica de cada classe.
+- Utilização do FluentValidation para as validações.
 
 
 
