@@ -132,9 +132,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┃ ┃ ┗ 📜RetornoEnum.cs
  ┃ ┣ 📂Exceptions
  ┃ ┃ ┣ 📜EncriptacaoPossuiEspacoException.cs
- ┃ ┃ ┣ 📜EnumDescricaoNuloReferenceException.cs
- ┃ ┃ ┣ 📜ForbiddenAccessException.cs
- ┃ ┃ ┗ 📜NotFoundException.cs
+ ┃ ┃ ┗ 📜EnumDescricaoNuloReferenceException.cs
  ┃ ┣ 📂Extensions
  ┃ ┃ ┣ 📜EnumExtensions.cs
  ┃ ┃ ┣ 📜ObjetoExtensions.cs
@@ -191,7 +189,6 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  ┃ ┃ ┣ 📜TokenController.cs
  ┃ ┃ ┗ 📜ValidarController.cs
  ┃ ┣ 📂Filters
- ┃ ┃ ┣ 📜ApiExceptionFilterAttribute.cs
  ┃ ┃ ┗ 📜NotificacaoFilter.cs
  ┃ ┣ 📂Middleware
  ┃ ┃ ┗ 📜ErrorHandlerMiddleware.cs
