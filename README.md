@@ -58,6 +58,10 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 ![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/diagram-arquitetural.jpg?raw=true)
 
+## Execuções de testes: ##
+
+![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/testes.jpg?raw=true)
+
 ## Outros Motivos de Decisão de Implementação: ##
  - Alteração no retorno da API para ao invés de retornar apenas um verdadeiro/falso, a aplicação retornará as inconsistências das validações de senha e se a validação foi verdadeiro ou falso.
  - Implementação de uma criptografia básica para ter uma maior segurança na transferência das senhas entre as camandas e a persistência ao banco. 
@@ -77,6 +81,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Foi feito a gravação da senha descriptografada no banco mongodb apenas para validar se a senha está correta no mongodb.
 - Utilização do SOLID.
 - Criação do Docker-compose e o DockerFile do projeto (mesmo que o escopo inicial não estava incluído).
+- Utilização de 53 testes unitários e integrados.
 
 
 > **_Nota:_** Para cada classe existe uma documentação em cabeçalho explicando a sua responsabilidade. O intuito é para facilitar o entendimento das responsabilidades.
