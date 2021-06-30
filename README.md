@@ -53,6 +53,10 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Independência de qualquer elemento externo.
 - Ter uma maior estabilidade.
 
+## Diagrama Arquitetural do Projeto: ##
+
+![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/diagram-arquitetural.jpg?raw=true)
+
 ## Outros Motivos de Decisão de Implementação: ##
  - Alteração no retorno da API para ao invés de retornar apenas um verdadeiro/falso, a aplicação retornará as inconsistências da validações de senha e se a validação foi verdadeiro ou não.
  - Implementação de uma criptografia básica para ter uma maior segurança na transferência das senhas entre as camandas e a persistência de banco. 
