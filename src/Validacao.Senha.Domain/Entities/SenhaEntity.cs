@@ -18,10 +18,11 @@ namespace Validacao.Senha.Domain.Entities
 
         public string Conteudo { get; set; }
 
+
         public string ConteudoCriptografado => !Conteudo.EhNuloOuExisteEspaco() ? Conteudo.Criptografar() : string.Empty;
 
         [JsonIgnore]
-        public string ConteudoDescriptografado => !Conteudo.EhNuloOuExisteEspaco() ? Conteudo.Descriptografar() : string.Empty;
+        public string ConteudoDescriptografado => !Conteudo.EhNuloOuExisteEspaco() ? Conteudo : string.Empty;
 
         public override bool Validar()
         {

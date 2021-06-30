@@ -58,12 +58,13 @@ namespace Validacao.Senha.Domain.Validations
             RuleFor(a => a.ConteudoCriptografado)
                 .Must(x => x.Validar(RegexConstantes.REGEX_IGUAL_NOVE_OU_MAIS_CARACTERES))
                 .WithMessage(MensagensConstantes.SENHA_COM_MENOS_NOVE_CARACTERES)
+                .When(x => !string.IsNullOrWhiteSpace(x.ConteudoDescriptografado))
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error08.ObterDescricao());
         }
 
         private void ValidarSenhaNaoInformarda()
         {
-            RuleFor(a => a.ConteudoCriptografado)
+            RuleFor(a => a.Conteudo)
                 .NotEmpty()
                 .WithMessage(MensagensConstantes.SENHA_NAO_INFORMADA)
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error01.ObterDescricao());
@@ -74,6 +75,7 @@ namespace Validacao.Senha.Domain.Validations
             RuleFor(a => a.ConteudoCriptografado)
                 .Must(x => x.Validar(RegexConstantes.REGEX_PELO_MENOS_UMA_LETRA_MAIUSCULA))
                 .WithMessage(MensagensConstantes.SENHA_PELO_MENOS_UMA_LETRA_MAIUSCULA)
+                .When(x => !string.IsNullOrWhiteSpace(x.ConteudoDescriptografado))
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error02.ObterDescricao());
         }
 
@@ -82,6 +84,7 @@ namespace Validacao.Senha.Domain.Validations
             RuleFor(a => a.ConteudoCriptografado)
                 .Must(x => x.Validar(RegexConstantes.REGEX_PELO_MENOS_UMA_LETRA_MINUSCULA))
                 .WithMessage(MensagensConstantes.SENHA_PELO_MENOS_UMA_LETRA_MINUSCULA)
+                .When(x => !string.IsNullOrWhiteSpace(x.ConteudoDescriptografado))
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error03.ObterDescricao());
         }
 
@@ -90,6 +93,7 @@ namespace Validacao.Senha.Domain.Validations
             RuleFor(a => a.ConteudoCriptografado)
                 .Must(x => x.Validar(RegexConstantes.REGEX_PELO_MENOS_UM_CARACTER_ESPECIAL))
                 .WithMessage(MensagensConstantes.SENHA_PELO_MENOS_UM_CARACTER_ESPECIAL)
+                .When(x => !string.IsNullOrWhiteSpace(x.ConteudoDescriptografado))
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error04.ObterDescricao());
         }
 
@@ -98,6 +102,7 @@ namespace Validacao.Senha.Domain.Validations
             RuleFor(a => a.ConteudoCriptografado)
                 .Must(x => x.Validar(RegexConstantes.REGEX_PELO_MENOS_UM_NUMERO))
                 .WithMessage(MensagensConstantes.SENHA_PELO_MENOS_UM_DIGITO_NUMERICO)
+                .When(x => !string.IsNullOrWhiteSpace(x.ConteudoDescriptografado))
                 .OverridePropertyName(CodigoErrorValidacaoEnum.Error05.ObterDescricao());
         }
 
