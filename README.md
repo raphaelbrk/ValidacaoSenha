@@ -47,6 +47,9 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 
 ## Arquitetura Utilizada: Clean Architecture: ##
 
+<br>
+
+<br>
 - Independência de Framework.
 - Independência de identidade.
 - Independência de banco de dados.
@@ -62,6 +65,13 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Implementação de alguns padrões de projetos normalmente utilizados e outros para demostrar o meu nivel de conhecimento.
 - Utilização do Clean Code.
 - Utilização da aplicação autenticação JWT básica para ter uma segurança maior na API.
+- Utilização do CodeMaid para ordenar e adequar o código.
+- Utilização do Insomnia e Postman para tester fora do swagger.
+- Criação de pastas para facilitar o entendimento e separar cada responsabilidade com Helpers, Extensions, Interfaces, Context, Command, Query, Handler, Constantes, Enums, Validations, Exceptions, Middleware, filters, etc.
+- Padronização das nomeclaturas de classes através de suas responsabilidades.
+- Padronização de nome de metódos no verbo infinitivo.
+- Responsabilidade unicas de cada classe.
+
 
 
 > **_Nota:_** Para cada classe existe uma documentação em cabeçalho explicando a sua responsabilidade. O intuito é para facilitar o entendimento das responsabilidades.
