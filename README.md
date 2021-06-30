@@ -67,7 +67,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Criação de pastas para facilitar o entendimento e separar cada responsabilidade com Helpers, Extensions, Interfaces, Context, Command, Query, Handler, Constantes, Enums, Validations, Exceptions, Middleware, filters, etc.
 - Padronização das nomeclaturas de classes através de suas responsabilidades.
 - Padronização de nome de metódos no verbo infinitivo.
-- Responsabilidade unicas de cada classe.
+- Responsabilidade unica de cada classe.
 
 
 
