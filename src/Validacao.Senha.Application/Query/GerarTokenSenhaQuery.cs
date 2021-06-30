@@ -6,7 +6,7 @@ namespace Validacao.Senha.Application.Query
     /// Classe responsável em consultar para geração do token JWT.
     /// </summary>
     /// <seealso cref="Validacao.Senha.Application.Base.GerarTokenSenhaQuery" />
-    public class GerarTokenSenhaQuery : BaseSenhaQueryCommand
+    public class GerarTokenSenhaQuery : BaseSenhaQueryCommand<object>
     {
         public GerarTokenSenhaQuery(string conteudo) : base(conteudo)
         {
