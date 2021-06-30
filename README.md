@@ -54,13 +54,6 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Independência de qualquer elemento externo.
 - Ter uma maior estabilidade.
 
-## Diagrama Arquitetural do Projeto: ##
-
-![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/diagram-arquitetural.jpg?raw=true)
-
-## Execuções de testes: ##
-
-![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/testes.jpg?raw=true)
 
 ## Outros Motivos de Decisão de Implementação: ##
  - Alteração no retorno da API para ao invés de retornar apenas um verdadeiro/falso, a aplicação retornará as inconsistências das validações de senha e se a validação foi verdadeiro ou falso.
@@ -82,9 +75,19 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Utilização do SOLID.
 - Criação do Docker-compose e o DockerFile do projeto (mesmo que o escopo inicial não estava incluído).
 - Utilização de 53 testes unitários e integrados.
+- Documentação de responsabilidades de classes.
 
 
 > **_Nota:_** Para cada classe existe uma documentação em cabeçalho explicando a sua responsabilidade. O intuito é para facilitar o entendimento das responsabilidades.
+
+
+## Diagrama Arquitetural do Projeto: ##
+
+![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/diagram-arquitetural.jpg?raw=true)
+
+## Execuções de testes: ##
+
+![alt text](https://github.com/raphaelbrk/ValidacaoSenha/blob/main/img/testes.jpg?raw=true)
 
 ## Estrutura do Projeto: ##
 
