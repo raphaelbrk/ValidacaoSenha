@@ -16,7 +16,7 @@ namespace Validacao.Senha.Domain.Entities
             Conteudo = conteudo;
         }
 
-        public string Conteudo { get; set; }
+        public string Conteudo { get; private set; }
 
 
         public string ConteudoCriptografado => !Conteudo.EhNuloOuExisteEspaco() ? Conteudo.Criptografar() : string.Empty;

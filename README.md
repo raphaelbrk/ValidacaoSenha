@@ -38,6 +38,7 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
  - Command Pattern.
  - Dependency Injection Pattern.
 
+
   ## Metodologias Utilizadas ##
   - Clean Code.
   - SOLID.
@@ -73,7 +74,9 @@ Segue abaixo o detalhamento das tecnologias, padrões de projetos e metodologias
 - Padronização de nome de metódos no verbo infinitivo.
 - Responsabilidade unica de cada classe.
 - Utilização do FluentValidation para as validações.
-
+- Foi feito a gravação da senha descriptografada no banco mongodb apenas para validar se a senha está correta no mongodb.
+- Utilização do SOLID.
+- Criação do Docker-compose e o DockerFile do projeto (mesmo que o escopo inicial não estava incluído).
 
 
 > **_Nota:_** Para cada classe existe uma documentação em cabeçalho explicando a sua responsabilidade. O intuito é para facilitar o entendimento das responsabilidades.

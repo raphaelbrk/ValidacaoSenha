@@ -11,7 +11,7 @@ namespace Validacao.Senha.Domain.Entities
     public class BaseAbstractEntity
     {
         [BsonId]
-        public virtual Guid Id { get; set; }
+        public virtual Guid Id { get; protected set; }
 
         public virtual bool Validar()
         {
