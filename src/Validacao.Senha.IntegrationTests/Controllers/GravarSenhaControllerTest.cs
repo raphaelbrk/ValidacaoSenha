@@ -11,7 +11,7 @@ namespace Validacao.Senha.IntegrationTests.Controllers
     /// Classe responsável em GravarSenha da integração do controller de validação.
     /// </summary>
     /// <seealso cref="Validacao.Senha.IntegrationTests.BaseTest" />
-    internal class GravarSenhaController : BaseTest
+    internal class GravarSenhaControllerTest : BaseTest
     {
         #region "Testes"
 
